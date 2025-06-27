@@ -94,12 +94,12 @@
   </style>
 </head>
 <body>
+  <form id="googleForm">
   <div class="survey-container">
-    <img src="https://iili.io/FAvmRLb.png">
     <h2>Customer Experience Survey</h2>
-    
+    <img src="d:\Summer Class\Jollibee.jpg" alt="Jollibee Logo">
 
-    <form>
+    
       <fieldset>
         <div class="form-group">
           <label for="name"><strong>Name</strong></label>
@@ -155,5 +155,29 @@
       </div>
     </form>
   </div>
+  <script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzr0-PAinfOa69x6DZxmkPsckdXg1YXi_zgYoM1YHrko3ID-nHZt-4i18_zijNSsT4/exec';
+
+const form = document.getElementById('googleForm');
+
+  form.addEventListener('submit', e => {
+
+    e.preventDefault(); //This stops the browser’s default action of reloading
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+
+      .then(response => {
+
+        alert("Form submitted successfully!");
+
+        form.reset();
+
+      })
+
+      .catch(error => alert('Error!', error.message));
+
+  });
+</script>
 </body>
 </html>
