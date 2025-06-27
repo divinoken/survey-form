@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Survey</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #711b1b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .survey-container {
+      background: #ffffff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .survey-container h2 {
+      text-align: center;
+      color: #d62828; /* Jollibee red */
+      margin-bottom: 20px;
+    }
+
+    .survey-container img {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 100px;
+      height: auto;
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: 20px;
+      padding: 0;
+    }
+
+    label, select, input, textarea {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .buttons {
+      text-align: center;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #d62828;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #b51f1f;
+    }
+  </style>
+</head>
+<body>
+  <div class="survey-container">
+    <img src="d:\Summer Class\Jollibee.jpg" alt="Jollibee Logo">
+    <h2>Customer Experience Survey</h2>
+    
+
+    <form>
+      <fieldset>
+        <div class="form-group">
+          <label for="name"><strong>Name</strong></label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email"><strong>Email (optional)</strong></label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="age"><strong>Age</strong></label>
+          <input type="number" id="age" name="age" min="10" max="100">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-group">
+          <label><strong>How satisfied are you with our customer service?</strong></label>
+          <input type="radio" name="rating" value="very_satisfied"> Very Satisfied<br>
+          <input type="radio" name="rating" value="satisfied"> Satisfied<br>
+          <input type="radio" name="rating" value="neutral"> Neutral<br>
+          <input type="radio" name="rating" value="dissatisfied"> Dissatisfied
+        </div>
+
+        <div class="form-group">
+          <label><strong>What features do you use? (Check all that apply)</strong></label>
+          <input type="checkbox" name="feature" value="chat"> Live Chat<br>
+          <input type="checkbox" name="feature" value="support"> Email Support<br>
+          <input type="checkbox" name="feature" value="faq"> FAQs
+        </div>
+
+        <div class="form-group">
+          <label for="contact_method"><strong>Preferred Contact Method</strong></label>
+          <select id="contact_method" name="contact_method">
+            <option value="">--Please choose--</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="chat">Live Chat</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-group">
+          <label for="comments"><strong>Feedback</strong></label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Tell us how we can improve..."></textarea>
+        </div>
+      </fieldset>
+
+      <div class="buttons">
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
